@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="DE" >
+    <head>
+      <div id name="überschrift">
+        <h1>SCHNELL-IMBIß</h1>
+      </div>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="=width=device-width, initial-scale=1.0"/>
+        <div name id="kopf">
+        <canvas id="newCanvas" width="450" height="300"></canvas>
+      <script>
+         // canvas
+         /*var c = document.getElementById("newCanvas");
+         var ctx = c.getContext("2d");*/
+          
+         var c = document.getElementById('newCanvas');
+         var context = c.getContext('2d');
+         var cX = 0;
+         var cY = 0;
+         var radius = 100;
+         var text;
+         
+         context.save();
+         context.translate(c.width / 2, c.height / 2);
+         context.scale(2, 1);
+         context.beginPath();
+         context.arc(cX, cY, radius, 0, 2 * Math.PI, false);
+         context.restore();
+         context.fillStyle = "red";
+         context.fill(text);
+         context.font = "50px Arial black";
+         context.fillText("PASCHA GRILL", 80, 80)
+         context.lineWidth = 4;
+         context.strokeStyle = 'black';
+         context.stroke();
+         /*context.font = "50px Arial black";
+         context.fillText("PASCHA GRILL", 80, 80)*/
+      </script>
+      </div>
+<Style>
+  .überschrift{
+  
+  }
+  .newCanvas {
+  -ms-flex-item-align: center;
+  
+  
+  
+  
+  }  
+
+ body {
+  font-family: futura;
+  color: white;
+  background-image: -webkit-linear-gradient(125deg, transparent 30%, rgba(255, 0, 0, 0.75)), -webkit-linear-gradient(45deg, #207261, #002B36);
+  background-image: -moz-linear-gradient(125deg, transparent 30%, rgb(255, 0, 0)), -moz-linear-gradient(45deg, #207261, #002B36);
+  background-image: -o-linear-gradient(125deg, transparent 30%, rgb(255, 0, 0)), -o-linear-gradient(45deg, #207261, #002B36);
+  background-image: linear-gradient(125deg, transparent 30%, rgb(255, 0, 0)), linear-gradient(45deg, #207261, #002B36);
+}
+
+div {
+  text-align: center;
+  margin: 2em auto 4em;
+  max-width: 600px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+  display: block;
+  margin: 0.75em;
+}
+
+.button {
+  letter-spacing: 0.5em;
+  text-decoration: center;
+  padding: 0.75em 1.25em 0.75em 1.75em;
+  border-color: rgb(0, 0, 0);
+  border-width: 2px;
+  border-style: solid;
+  white-space: nowrap;
+  -webkit-transition: border-color 500ms ease, color 250ms ease;
+  -moz-transition: border-color 500ms ease, color 250ms ease;
+  -ms-transition: border-color 500ms ease, color 250ms ease;
+  -o-transition: border-color 500ms ease, color 250ms ease;
+  transition: border-color 500ms ease, color 250ms ease;
+}
+
+.button:hover {
+  color: #cfb4f7;
+  border-color: #cfb4f7;
+}
+
+.button:before,
+.button:after {
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-width: 0;
+  -webkit-transition: border-color 500ms ease;
+  -moz-transition: border-color 500ms ease;
+  -ms-transition: border-color 500ms ease;
+  -o-transition: border-color 500ms ease;
+  transition: border-color 500ms ease;
+}
+
+a:hover .button:before,
+a:hover .button:after {
+  border-color: #000000;
+}
+
+.ribbon {
+  border-width: 2px 0;
+  position: relative;
+  display: block;
+  padding: 0.75em 0 0.75em 0.5em;
+}
+
+.ribbon:before {
+  content: "";
+  display: inline-block;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  position: absolute;
+  top: -50%;
+  bottom: 50%;
+  left: 1.6em;
+  right: 0;
+}
+
+.ribbon:after {
+  content: "";
+  display: inline-block;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  position: absolute;
+  top: -50%;
+  bottom: 50%;
+  left: 0;
+  right: 1.6em;
+}
+
+.obligetory-rounded {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/*
+.box {
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.25), inset 0 1px 5px 2px rgba(0, 0, 0, 0.25);
+}
+*/
+
+
+</Style>
+    
+  </head>
+            
+ <body>
+   <div> 
+    <a href="https://www.google.de/maps/place/Pascha+Grill/@51.5796133,6.7333913,17z/data=!3m1!4b1!4m5!3m4!1s0x47b893feaf67fcc3:0x200728166a7c0347!8m2!3d51.57961!4d6.73558"><span class="button ribbon">Pascha Grill</span></a>
+   </div>
+</body>           
+
+</html>
